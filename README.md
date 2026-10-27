@@ -53,15 +53,19 @@ O projeto utiliza políticas de segurança em nível de linha (RLS) no Supabase,
 
 ## Situação do desenvolvimento
 
-**Em desenvolvimento.**
+**Aplicação desenvolvida e publicada.**
 
-- Estrutura do banco de dados criada.
-- Relacionamentos e políticas RLS configurados.
-- Regras de reserva e expiração implementadas no banco.
-- Interface inicial de navegação e formulários criada.
-- Integração da autenticação em fase de testes e correção.
-- Integração completa das doações e reservas com a interface ainda pendente.
-- Publicação final da aplicação ainda pendente.
+- Banco de dados PostgreSQL estruturado no Supabase, com três tabelas relacionadas.
+- Políticas de segurança RLS e regras de negócio configuradas.
+- Cadastro, autenticação e gerenciamento de sessões integrados ao Supabase Auth.
+- Cadastro, consulta, edição, inativação e exclusão de doações implementados.
+- Upload e exibição de imagens das doações integrados ao Supabase Storage.
+- Reserva e cancelamento de alimentos implementados.
+- Controle de disponibilidade e expiração automática das reservas.
+- Interface responsiva com navegação pública e área autenticada.
+- Código-fonte disponibilizado em repositório público no GitHub.
+
+**Aplicação publicada:** https://greensharecomunidade.lovable.app
 
 ## Projeto acadêmico
 
