@@ -68,3 +68,18 @@ O projeto utiliza políticas de segurança em nível de linha (RLS) no Supabase,
 Desenvolvido como parte do **Tema Integrador II**, do curso de Análise e Desenvolvimento de Sistemas da Universidade Iguaçu (UNIG).
 
 O projeto busca aplicar conhecimentos de desenvolvimento web, modelagem de banco de dados, autenticação, segurança e integração entre frontend e backend.
+
+### Integrantes
+
+- **Caique Casemiro**
+- **Thiele Vitória**
+- **Yuri Lima**
+
+### Instituição
+
+**Universidade Iguaçu (UNIG)**  
+Curso: Análise e Desenvolvimento de Sistemas  
+Disciplina: Tema Integrador II  
+Ano: 2026
+
+O projeto foi desenvolvido com o objetivo de contribuir para a redução do desperdício de alimentos e incentivar a solidariedade comunitária por meio da tecnologia.
