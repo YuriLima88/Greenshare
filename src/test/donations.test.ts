@@ -1,0 +1,9 @@
+import { describe, expect, it } from "vitest";
+import { assertOwner, assertStatusChange, donationSchema, UNIDADES, type Donation } from "@/lib/donations";
+const input = { titulo: "Legumes", descricao: "Alimentos frescos", categoria: "Verduras e legumes", quantidade: 3.5, unidade_medida: "kg", data_validade: "2026-10-30", local_retirada: "Ponto de retirada", janela_retirada_inicio: "2026-10-27T12:00:00Z", janela_retirada_fim: "2026-10-27T15:00:00Z", foto_url: null, status: "Disponivel" };
+describe("donation rules", () => {
+ it("accepts decimal quantity separately from exactly the four units", () => { expect(UNIDADES).toEqual(["kg", "g", "unidades", "litros"]); expect(donationSchema.parse(input).quantidade).toBe(3.5); expect(donationSchema.safeParse({ ...input, quantidade: "3 kg" }).success).toBe(false); expect(donationSchema.safeParse({ ...input, unidade_medida: "caixas" }).success).toBe(false); });
+ it("retains pickup location and window", () => { const parsed = donationSchema.parse(input); expect(parsed.local_retirada).toBe("Ponto de retirada"); expect(parsed.janela_retirada_inicio).toBe("2026-10-27T12:00:00Z"); expect(donationSchema.safeParse({ ...input, janela_retirada_fim: input.janela_retirada_inicio }).success).toBe(false); });
+ it("only allows the donation owner", () => { const donation = { id_usuario_doador: 42 } as Donation; expect(() => assertOwner(donation, 42)).not.toThrow(); expect(() => assertOwner(donation, 43)).toThrow(); });
+ it("preserves reservation state while allowing logical inactivation", () => { expect(() => assertStatusChange("Reservado", "Inativo")).toThrow(); expect(() => assertStatusChange("Reservado", "Entregue")).toThrow(); expect(() => assertStatusChange("Disponivel", "Reservado")).toThrow(); expect(() => assertStatusChange("Disponivel", "Inativo")).not.toThrow(); });
+});
