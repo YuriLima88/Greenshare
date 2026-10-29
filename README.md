@@ -75,9 +75,9 @@ O projeto busca aplicar conhecimentos de desenvolvimento web, modelagem de banco
 
 ### Integrantes
 
-- **Caique Casemiro**
-- **Thiele Vitória**
-- **Yuri Lima**
+- **[Intergante 1]**
+- **[Integrante 2]**
+- **Yuri Lima** - Implementação técnica, integração e testes das funcionalidades do GreenShare.
 
 ### Instituição
 
