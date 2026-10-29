@@ -77,7 +77,7 @@ O projeto busca aplicar conhecimentos de desenvolvimento web, modelagem de banco
 
 - **[Intergante 1]**
 - **[Integrante 2]**
-- **Yuri Lima** - Implementação técnica, integração e testes das funcionalidades do GreenShare.
+- **Yuri Lima**
 
 ### Instituição
 
