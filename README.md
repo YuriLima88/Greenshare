@@ -76,7 +76,7 @@ O projeto busca aplicar conhecimentos de desenvolvimento web, modelagem de banco
 ### Integrantes
 
 - **[Intergante 1]**
-- **Thiele vitória**
+- ** Thiele Vitória**
 - **Yuri Lima**
 
 ### Instituição
